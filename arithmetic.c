@@ -53,23 +53,24 @@
 
 // Note : difference between 'a' and 'A' in ASCII is 32 .
 
-// int main()
-// {
-//     char a;
-//     scanf("%c", &a);
-//     if (a >= 'a' && a <= 'z')
-//     {
-//         int ans = a - 32;
-//         printf("%c", ans);
-//     }
-//     else
-//     {
-//         int ans = a + 32;
-//         printf("%c", ans);
-//     }
-//     return 0;
-// }
+int main()
+{
+    char a;
+    scanf("%c", &a);
+    if (a >= 'a' && a <= 'z')
+    {
+        int ans = a - 32;
+        printf("%c", ans);
+    }
+    else
+    {
+        int ans = a + 32;
+        printf("%c", ans);
+    }
+    return 0;
+}
 
+// between 3 number which one is min & which one is max
 int main()
 {
     int a, b, c;
