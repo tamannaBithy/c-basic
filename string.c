@@ -41,7 +41,7 @@
 //     return 0;
 // }
 
-//////// input with space ////////////
+//////// input with space///////////////////////////////////
 
 // dui vabe space wala input print kora jay 1. gets diye , 2. fgets diye
 
@@ -57,24 +57,47 @@
 //     return 0;
 // }
 
-///////// length of a string ///////////
+///////// length of a string ///////////////////////////////////
+
+// int main()
+// {
+//     char a[100];
+//     scanf("%s", a);
+//     //// 1st way
+//     // int count = 0;
+//     // for (int i = 0; a[i] != '\0'; i++)
+//     // {
+//     //     count++;
+//     // }
+//     // printf("%d", count);
+
+//     //// 2nd way : built in function
+
+//     int st = strlen(a);
+//     printf("%d", st);
+
+//     return 0;
+// }
+
+///////// copy a string ///////////////////////////////////
 
 int main()
 {
-    char a[100];
-    scanf("%s", a);
-    //// 1st way
-    // int count = 0;
-    // for (int i = 0; a[i] != '\0'; i++)
+    char a[100], b[100];
+    scanf("%s %s", a, b);
+
+    ////////////// 1st way ///////////
+
+    // for (int i = 0; i <= strlen(b); i++)
     // {
-    //     count++;
+    //     a[i] = b[i];
     // }
-    // printf("%d", count);
 
-    //// 2nd way : built in function
+    ////////////// 2nd way ///////////
 
-    int st = strlen(a);
-    printf("%d", st);
+    strcpy(a, b); /// b er ja ache sob a te copy hbe
+
+    printf("%s", a);
 
     return 0;
 }
