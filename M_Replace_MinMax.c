@@ -10,7 +10,7 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    int min = INT_MAX, position, temp;
+    int min = INT_MAX, posMin, posMax;
     int max = INT_MIN;
 
     for (int i = 0; i < n; i++)
@@ -18,8 +18,7 @@ int main()
         if (min > a[i])
         {
             min = a[i];
-            position = i;
-            temp = position;
+            posMin = i;
         }
     }
     for (int i = 0; i < n; i++)
@@ -27,14 +26,14 @@ int main()
         if (max < a[i])
         {
             max = a[i];
-            position = i;
+            posMax = i;
         }
     }
 
     for (int i = 0; i < n; i++)
     {
-        a[position] = min;
-        a[temp] = max;
+        a[posMax] = min;
+        a[posMin] = max;
         printf("%d ", a[i]);
     }
 
