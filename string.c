@@ -3,18 +3,6 @@
 
 // int main()
 // {
-//     int a[5];
-//     printf("%d\n", sizeof(a));
-//     printf("%d\n", sizeof(int));           // int 4 byte kore jayga ney
-//     printf("%d\n", sizeof(long long int)); // long long int 8 byte kore jayga ney
-//     // to find out array size
-//     int arrSize = sizeof(a) / sizeof(int);
-//     printf("%d\n", arrSize);
-//     return 0;
-// }
-
-// int main()
-// {
 
 //     // char a[6] = {'r', 'a', 'h', 'a', 't'}; // aivabe string initialize kora jay tobe ai khetre pichone automatic null(\0) bosanor kono gurantee nai
 //     // char a[6] = "rahat"; // aivabe o kora jay tobe ai khetre se automatic laste null bosay ney tai size ak besi hbe na hole vul result print korbe
@@ -81,23 +69,86 @@
 
 ///////// copy a string ///////////////////////////////////
 
+// int main()
+// {
+//     char a[100], b[100];
+//     scanf("%s %s", a, b);
+
+//     ////////////// 1st way ///////////
+
+//     // for (int i = 0; i <= strlen(b); i++)
+//     // {
+//     //     a[i] = b[i];
+//     // }
+
+//     ////////////// 2nd way : built-in func ///////////
+
+//     strcpy(a, b); /// b er ja ache sob a te copy hbe
+
+//     printf("%s", a);
+
+//     return 0;
+// }
+
+///////// String Concatenation ///////////////////////////////////
+
+// int main()
+// {
+//     char a[200], b[100];
+//     scanf("%s %s", a, b);
+
+//     ////////////// 1st way ///////////
+
+//     // int k = strlen(a);
+//     // for (int i = 0; i <= strlen(b); i++)
+//     // {
+//     //     a[k] = b[i];
+//     //     k++;
+//     // }
+
+//     ////////////// 2nd way : built-in func ///////////
+
+//     strcat(a, b); //// manual for loop diye ami b stringer koto tuku porjonto concat korte chai seta bole deya jay kintu built in func pura string ta e concat kore dibe
+
+//     printf("%s", a);
+//     return 0;
+// }
+
+//////// counting or frequency array for char value
+
 int main()
 {
-    char a[100], b[100];
-    scanf("%s %s", a, b);
+    char a[100];
+    scanf("%s", a);
 
-    ////////////// 1st way ///////////
+    int count[26] = {0};
+    for (int i = 0; i < strlen(a); i++)
+    {
+        int value = a[i] - 'a'; // you can use 97 too
+        count[value]++;
+    }
 
-    // for (int i = 0; i <= strlen(b); i++)
+    // for (int i = 0; i < 26; i++)
     // {
-    //     a[i] = b[i];
+    //     if (count[i] != 0)
+    //     {
+    //         int value = i + 'a';
+    //         printf("%c - %d\n", value, count[i]);
+    //     }
     // }
 
-    ////////////// 2nd way ///////////
+    for (int i = 0; i < strlen(a); i++)
+    {
 
-    strcpy(a, b); /// b er ja ache sob a te copy hbe
+        int value = a[i] - 'a';
 
-    printf("%s", a);
+        if (count[value] != 0)
+        {
+            printf("%c - %d\n", value + 'a', count[value]);
+        }
+
+        count[value] = 0;
+    }
 
     return 0;
 }
