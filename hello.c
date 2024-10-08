@@ -13,14 +13,14 @@
 //    return 0;
 // }
 
-int main()
-{
-    printf("Hello, world! I am learning C programming language. ^_^\n");
-    printf("Programming is fun and challenging. /\\/\\/\\\n");
-    printf("I want to give my 100%% dedication to learn!\t");
-    printf("I will succeed one day.");
-    return 0;
-}
+// int main()
+// {
+//     printf("Hello, world! I am learning C programming language. ^_^\n");
+//     printf("Programming is fun and challenging. /\\/\\/\\\n");
+//     printf("I want to give my 100%% dedication to learn!\t");
+//     printf("I will succeed one day.");
+//     return 0;
+// }
 
 // int main() {
 //     // Declare integer variables
@@ -53,12 +53,38 @@ int main()
 //     return 0;
 // }
 
-// int main(){
-//     int num, numTwo;
-//     char a, b;
-//     float f;
+/////////////// nested loop ////////////////////////////
 
-//     scanf("%d", &num);
-//     printf("%d", num);
-//     return 0;
+// int main()
+// {
+//     int i = 3;
+//     while (i <= 5)
+//     {
+//         for (int j = 0; j < i; j++)
+//         {
+//             printf("*");
+//         }
+//         i++;
+//     }
 // }
+
+// int main()
+// {
+//     for (int i = 0; i <= 10; i++)
+//     {
+//         if (i > 2)
+//         {
+//             continue;
+//         }
+//         printf("hi ");
+//     }
+// }
+
+int main()
+{
+    int n = 5;
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", i);
+    }
+}
