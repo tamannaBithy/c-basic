@@ -131,26 +131,26 @@
 
 //////// counting or frequency array for int value
 
-int main()
-{
-    int n;
-    scanf("%d", &n);
-    int a[n];
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int a[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
 
-    int count[7] = {0}; // array te heighest num jeta thakbe tar theke 1 besi hbe. amr array ta chilo 1 2 3 1 4 5 6 0 2 5 0 3 1
+//     int count[7] = {0}; // array te heighest num jeta thakbe tar theke 1 besi hbe. amr array ta chilo 1 2 3 1 4 5 6 0 2 5 0 3 1
 
-    for (int i = 0; i < n; i++)
-    {
-        int val = a[i];
-        count[val]++;
-    }
+//     for (int i = 0; i < n; i++)
+//     {
+//         int val = a[i];
+//         count[val]++;
+//     }
 
-    for (int i = 0; i < sizeof(count) / sizeof(int); i++)
-    {
-        printf("%d - %d\n", i, count[i]);
-    }
-}
+//     for (int i = 0; i < sizeof(count) / sizeof(int); i++)
+//     {
+//         printf("%d - %d\n", i, count[i]);
+//     }
+// }
