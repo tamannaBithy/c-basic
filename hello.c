@@ -79,3 +79,19 @@
 //         printf("hi ");
 //     }
 // }
+
+////////// memory address ////////////////////////
+
+void fun(void)
+{
+    int s = 100;
+    printf("funer s er memory address - %p\n", &s);
+}
+
+int main()
+{
+    int s = 200;
+    printf("mainer s er memory address - %p\n", &s);
+    fun();
+    return 0;
+}

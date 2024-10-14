@@ -1,7 +1,2 @@
-1
-12
-123
-1234
- 123
-  12
-   1
+mainer s er memory address - 00000038877FFE5C
+funer s er memory address - 00000038877FFE1C
