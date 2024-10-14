@@ -1,2 +1,0 @@
-mainer s er memory address - 00000038877FFE5C
-funer s er memory address - 00000038877FFE1C
