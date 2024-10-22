@@ -71,7 +71,7 @@
 //     return 0;
 // }
 
-////////// ascending order
+////////// descending order
 
 int main()
 {

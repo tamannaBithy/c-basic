@@ -3,6 +3,14 @@
 
 // int main()
 // {
+//     char str[] = "bangladesh is a \"beautiful\" country.";
+//     puts(str);  // puts akta depricated syntax either we can use fputs
+//     fputs(str, stdout);
+//     return 0;
+// }
+
+// int main()
+// {
 
 //     // char a[6] = {'r', 'a', 'h', 'a', 't'}; // aivabe string initialize kora jay tobe ai khetre pichone automatic null(\0) bosanor kono gurantee nai
 //     // char a[6] = "rahat"; // aivabe o kora jay tobe ai khetre se automatic laste null bosay ney tai size ak besi hbe na hole vul result print korbe
@@ -116,42 +124,42 @@
 
 //////// counting or frequency array for char value
 
-int main()
-{
-    char a[100];
-    scanf("%s", a);
+// int main()
+// {
+//     char a[100];
+//     scanf("%s", a);
 
-    int count[26] = {0};
-    for (int i = 0; i < strlen(a); i++)
-    {
-        int value = a[i] - 'a'; // you can use 97 too
-        count[value]++;
-    }
+//     int count[26] = {0};
+//     for (int i = 0; i < strlen(a); i++)
+//     {
+//         int value = a[i] - 'a'; // you can use 97 too
+//         count[value]++;
+//     }
 
-    // for (int i = 0; i < 26; i++)
-    // {
-    //     if (count[i] != 0)
-    //     {
-    //         int value = i + 'a';
-    //         printf("%c - %d\n", value, count[i]);
-    //     }
-    // }
+//     // for (int i = 0; i < 26; i++)
+//     // {
+//     //     if (count[i] != 0)
+//     //     {
+//     //         int value = i + 'a';
+//     //         printf("%c - %d\n", value, count[i]);
+//     //     }
+//     // }
 
-    for (int i = 0; i < strlen(a); i++)
-    {
+//     for (int i = 0; i < strlen(a); i++)
+//     {
 
-        int value = a[i] - 'a';
+//         int value = a[i] - 'a';
 
-        if (count[value] != 0)
-        {
-            printf("%c - %d\n", value + 'a', count[value]);
-        }
+//         if (count[value] != 0)
+//         {
+//             printf("%c - %d\n", value + 'a', count[value]);
+//         }
 
-        count[value] = 0;
-    }
+//         count[value] = 0;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 //////// consonant increase ////////////////////////
 
@@ -171,3 +179,57 @@ int main()
 
 //     printf("%d", consonant);
 // }
+
+/////////////// string to integer ////////////////////////
+
+// int main()
+// {
+
+//     char s[] = "3981";
+//     int sum = 0;
+
+//     for (int i = 0; i < strlen(s); i++)
+//     {
+//         int value = s[i] - '0';
+//         sum = sum * 10 + value;
+//     }
+
+//     printf("%d", sum);
+// }
+
+/////////////// integer to string  ////////////////////////
+
+int main()
+{
+
+    int n = 3456;
+    char str[10];
+    int i = 0;
+
+    if (n == 0)
+    {
+        str[i] = '0';
+    }
+
+    while (n > 0)
+    {
+        str[i] = (n % 10) + '0';
+        n = n / 10;
+        i++;
+    }
+
+    str[i] = '\0';
+
+    int start = 0, end = i - 1;
+
+    while (start < end)
+    {
+        char temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+        start++;
+        end--;
+    }
+
+    printf("%s", str);
+}
