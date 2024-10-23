@@ -155,20 +155,28 @@
 //     }
 // }
 
+/////////////////// loop on a int /////////////
+
 int main()
 {
-    int n, k;
-    scanf("%d", &n);
-    k = n;
-    for (int i = 0; i < n; i)
+    int n = 358;
+
+    int arr[10] = {0};
+    int length = 0;
+
+    for (int i = 0; i < 10; i++)
     {
-        for (int j = 1; j <= k; j++)
+        arr[i] = n % 10;
+        n = n / 10;
+        length++;
+        if (n == 0)
         {
-            printf("*");
+            break;
         }
-        k--;
-        printf("\n");
     }
 
-    return 0;
+    for (int i = 0; i < length; i++)
+    {
+        printf("%d\n", arr[i]);
+    }
 }

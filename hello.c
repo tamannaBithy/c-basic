@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // int main() {
 //    printf("Return something!\n"); // \n is an escape character for a new line
