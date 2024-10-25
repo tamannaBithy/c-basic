@@ -48,22 +48,56 @@
 
 ///////////// 2nd way: built in func //////////////
 
+// int main()
+// {
+//     char a[100], b[100];
+//     scanf("%s %s", &a, &b);
+//     int v = strcmp(a, b);
+//     printf("%d\n", v);
+//     if (v < 0)
+//     {
+//         printf("a choto\n");
+//     }
+//     else if (v > 0)
+//     {
+//         printf("b choto\n");
+//     }
+//     else
+//     {
+//         printf("same");
+//     }
+// }
+
+/////////////////////// find out the min & max string ///////////
+
 int main()
 {
-    char a[100], b[100];
-    scanf("%s %s", &a, &b);
-    int v = strcmp(a, b);
-    printf("%d\n", v);
-    if (v < 0)
+    char a[1001], b[1001], c[1001];
+    scanf("%s %s %s", a, b, c);
+
+    if (strcmp(a, b) <= 0 && strcmp(a, c) <= 0)
     {
-        printf("a choto\n");
+        printf("%s\n", a);
     }
-    else if (v > 0)
+    else if (strcmp(b, a) <= 0 && strcmp(b, c) <= 0)
     {
-        printf("b choto\n");
+        printf("%s\n", b);
     }
     else
     {
-        printf("same");
+        printf("%s\n", c);
+    }
+
+    if (strcmp(a, b) >= 0 && strcmp(a, c) >= 0)
+    {
+        printf("%s\n", a);
+    }
+    else if (strcmp(b, a) >= 0 && strcmp(b, c) >= 0)
+    {
+        printf("%s\n", b);
+    }
+    else
+    {
+        printf("%s\n", c);
     }
 }

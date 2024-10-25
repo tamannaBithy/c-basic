@@ -157,26 +157,26 @@
 
 /////////////////// loop on a int /////////////
 
-int main()
-{
-    int n = 358;
+// int main()
+// {
+//     int n = 358;
 
-    int arr[10] = {0};
-    int length = 0;
+//     int arr[10] = {0};
+//     int length = 0;
 
-    for (int i = 0; i < 10; i++)
-    {
-        arr[i] = n % 10;
-        n = n / 10;
-        length++;
-        if (n == 0)
-        {
-            break;
-        }
-    }
+//     for (int i = 0; i < 10; i++)
+//     {
+//         arr[i] = n % 10;
+//         n = n / 10;
+//         length++;
+//         if (n == 0)
+//         {
+//             break;
+//         }
+//     }
 
-    for (int i = 0; i < length; i++)
-    {
-        printf("%d\n", arr[i]);
-    }
-}
+//     for (int i = 0; i < length; i++)
+//     {
+//         printf("%d\n", arr[i]);
+//     }
+// }
