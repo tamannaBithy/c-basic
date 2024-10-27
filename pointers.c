@@ -45,8 +45,10 @@ int main()
     // printf("0th index er value - %p\n", ar[0]);
     // printf("0th index er value - %p\n", *ar);
 
-    printf("1st index er value - %p\n", ar[1]);
-    printf("1st index er value - %p\n", *(ar + 1));
+    printf("%d\n", ar[1]);  // *(ar + 1) a convert hoy
+    printf("%d\n", 1 [ar]); // *(1 + ar) a convert hoy
+    printf("%d\n", *(ar + 1));
+    printf("%d\n", *(1 + ar));
 
     // muloto ar[1] == *(ar+1),  1[ar] == *(1 + ar). amra ar[1] likhe access korte chaile aitake se in the back *(ar+1) a convert kore ney
     // tai jekno index access korte hole ar[1] likhle o pawa jabe abar 1[ar] likhle o pawa jabe
