@@ -179,3 +179,56 @@
 
 //     printf("%d", consonant);
 // }
+
+//////////// Given a string of length N. Print the unique characters in the string in increasing alphabetical order.
+
+int main()
+{
+
+    int n;
+    scanf("%d", &n);
+
+    char s[n + 1];
+    scanf("%s", &s);
+
+    char new_str[n + 1];
+
+    int k = 0;
+    for (int i = 0; i < n; i++)
+    {
+
+        int is_unique = 1;
+
+        for (int j = 0; j < k; j++)
+        {
+            if (s[i] == new_str[j])
+            {
+                is_unique = 0;
+                break;
+            }
+        }
+
+        if (is_unique)
+        {
+            new_str[k] = s[i];
+            k++;
+        }
+    }
+
+    new_str[k] = '\0';
+
+    for (int i = 0; i < k; i++)
+    {
+        for (int j = i + 1; j < k; j++)
+        {
+            if (new_str[i] > new_str[j])
+            {
+                char temp = new_str[i];
+                new_str[i] = new_str[j];
+                new_str[j] = temp;
+            }
+        }
+    }
+
+    printf("%s", new_str);
+}

@@ -180,3 +180,43 @@
 //         printf("%d\n", arr[i]);
 //     }
 // }
+
+///// Print how many unique numbers are in the array.
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int length = 0;
+
+    int new_arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        int is_unique = 1;
+
+        for (int j = 0; j < length; j++)
+        {
+            if (arr[i] == new_arr[j])
+            {
+                is_unique = 0;
+                break;
+            }
+        }
+
+        if (is_unique)
+        {
+            new_arr[length] = arr[i];
+            length++;
+        }
+    }
+
+    printf("%d", length);
+}
