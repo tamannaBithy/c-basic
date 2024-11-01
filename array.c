@@ -181,7 +181,7 @@
 //     }
 // }
 
-///// Print how many unique numbers are in the array.
+/// Print how many unique numbers are in the array.
 
 int main()
 {
