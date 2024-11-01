@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // int main()
 // {
@@ -170,20 +171,42 @@
 //     }
 // }
 
+// int main()
+// {
+//     int n, k;
+//     scanf("%d", &n);
+//     k = n;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 1; j <= k; j++)
+//         {
+//             printf("*");
+//         }
+//         k--;
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
 int main()
 {
-    int n, k;
+    int n, s, k = 1;
     scanf("%d", &n);
-    k = n;
+    s = n - 1;
     for (int i = 0; i < n; i++)
     {
-        for (int j = 1; j <= k; j++)
+        for (int j = 1; j <= s; j++)
         {
-            printf("*");
+            printf(" ");
         }
-        k--;
+
+        for (int j = k; j >= 1; j--)
+        {
+            printf("%d", j);
+        }
+        s--;
+        k++;
         printf("\n");
     }
-
-    return 0;
 }

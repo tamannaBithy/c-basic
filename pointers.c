@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 ////////// memory address ////////////////////////
 
@@ -34,22 +35,37 @@
 //     return 0;
 // }
 
+// int main()
+// {
+
+//     int ar[5] = {10, 20, 30, 40, 50};
+
+//     // printf("0th index er address - %p\n", &ar[0]);
+//     // printf("0th index er address - %p\n", ar);
+
+//     // printf("0th index er value - %p\n", ar[0]);
+//     // printf("0th index er value - %p\n", *ar);
+
+//     printf("%d\n", ar[1]);  // *(ar + 1) a convert hoy
+//     printf("%d\n", 1 [ar]); // *(1 + ar) a convert hoy
+//     printf("%d\n", *(ar + 1));
+//     printf("%d\n", *(1 + ar));
+
+//     // muloto ar[1] == *(ar+1),  1[ar] == *(1 + ar). amra ar[1] likhe access korte chaile aitake se in the back *(ar+1) a convert kore ney
+//     // tai jekno index access korte hole ar[1] likhle o pawa jabe abar 1[ar] likhle o pawa jabe
+// }
+
+// Print a single integer representing the absolute difference between A and B.
+
 int main()
 {
+    int a, b;
+    scanf("%d %d", &a, &b);
 
-    int ar[5] = {10, 20, 30, 40, 50};
+    int *p = &a;
+    int *k = &b;
 
-    // printf("0th index er address - %p\n", &ar[0]);
-    // printf("0th index er address - %p\n", ar);
+    int diff = abs(*p - *k);
 
-    // printf("0th index er value - %p\n", ar[0]);
-    // printf("0th index er value - %p\n", *ar);
-
-    printf("%d\n", ar[1]);  // *(ar + 1) a convert hoy
-    printf("%d\n", 1 [ar]); // *(1 + ar) a convert hoy
-    printf("%d\n", *(ar + 1));
-    printf("%d\n", *(1 + ar));
-
-    // muloto ar[1] == *(ar+1),  1[ar] == *(1 + ar). amra ar[1] likhe access korte chaile aitake se in the back *(ar+1) a convert kore ney
-    // tai jekno index access korte hole ar[1] likhle o pawa jabe abar 1[ar] likhle o pawa jabe
+    printf("%d", diff);
 }
