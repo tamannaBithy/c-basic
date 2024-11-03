@@ -55,17 +55,36 @@
 //     // tai jekno index access korte hole ar[1] likhle o pawa jabe abar 1[ar] likhle o pawa jabe
 // }
 
-// Print a single integer representing the absolute difference between A and B.
+///////////////// Print a single integer representing the absolute difference between A and B.
+
+// int main()
+// {
+//     int a, b;
+//     scanf("%d %d", &a, &b);
+
+//     int *p = &a;
+//     int *k = &b;
+
+//     int diff = abs(*p - *k);
+
+//     printf("%d", diff);
+// }
+
+/////////////////////// swap the number using pointer /////////////
+
+void swap_it(int *s, int *k)
+{
+    int temp = *s;
+    *s = *k;
+    *k = temp;
+}
 
 int main()
 {
-    int a, b;
-    scanf("%d %d", &a, &b);
+    int n, m;
+    scanf("%d %d", &n, &m);
 
-    int *p = &a;
-    int *k = &b;
+    swap_it(&n, &m);
 
-    int diff = abs(*p - *k);
-
-    printf("%d", diff);
+    printf("%d %d", n, m);
 }
