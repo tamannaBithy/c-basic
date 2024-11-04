@@ -7,7 +7,12 @@ void fun(int n)
     {
         return;
     }
-    printf("%d ", n);
+
+    printf("%d", n);
+    if (n > 1)
+    {
+        printf(" ");
+    }
     fun(n - 1);
 }
 
