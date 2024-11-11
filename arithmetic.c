@@ -70,49 +70,79 @@
 //     return 0;
 // }
 
-// between 3 number which one is min & which one is max
-int main()
-{
-    int a, b, c;
-    scanf("%d %d %d", &a, &b, &c);
+// // between 3 number which one is min & which one is max
+// int main()
+// {
+//     int a, b, c;
+//     scanf("%d %d %d", &a, &b, &c);
 
-    // minimum
-    if (a <= b && a <= c)
-    {
-        printf("%d ", a);
-    }
-    else if (b <= a && b <= c)
-    {
-        printf("%d ", b);
-    }
-    else
-    {
-        printf("%d ", c);
-    }
+//     // minimum
+//     if (a <= b && a <= c)
+//     {
+//         printf("%d ", a);
+//     }
+//     else if (b <= a && b <= c)
+//     {
+//         printf("%d ", b);
+//     }
+//     else
+//     {
+//         printf("%d ", c);
+//     }
 
-    // maximum
-    if (a >= b && a >= c)
-    {
-        printf("%d\n", a);
-    }
-    else if (b >= a && b >= c)
-    {
-        printf("%d\n", b);
-    }
-    else
-    {
-        printf("%d\n", c);
-    }
+//     // maximum
+//     if (a >= b && a >= c)
+//     {
+//         printf("%d\n", a);
+//     }
+//     else if (b >= a && b >= c)
+//     {
+//         printf("%d\n", b);
+//     }
+//     else
+//     {
+//         printf("%d\n", c);
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 ////////////////// summation of 1 to n ///////////////
 
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     long long sum = (1LL * (n + 1) * n) / 2;
+//     printf("%lld", sum);
+// }
+
 int main()
 {
+    // int t;
+    // scanf("%d", &t);
+
     int n;
     scanf("%d", &n);
-    long long sum = (1LL * (n + 1) * n) / 2;
-    printf("%lld", sum);
+
+    // for (int i = 0; i < 2 * n - 1; i++)
+    // {
+    //     for (int j = 1; j <= n; j++)
+    //     {
+    //         printf("%d ", j);
+    //     }
+    // }
+
+    int i = 1;
+
+    while (i <= n)
+    {
+        printf("%d ", i);
+        i++;
+
+        if (i == n)
+        {
+            i--;
+        }
+    }
 }
