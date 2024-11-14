@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // problem - 2
 
@@ -116,33 +117,3 @@
 //     long long sum = (1LL * (n + 1) * n) / 2;
 //     printf("%lld", sum);
 // }
-
-int main()
-{
-    // int t;
-    // scanf("%d", &t);
-
-    int n;
-    scanf("%d", &n);
-
-    // for (int i = 0; i < 2 * n - 1; i++)
-    // {
-    //     for (int j = 1; j <= n; j++)
-    //     {
-    //         printf("%d ", j);
-    //     }
-    // }
-
-    int i = 1;
-
-    while (i <= n)
-    {
-        printf("%d ", i);
-        i++;
-
-        if (i == n)
-        {
-            i--;
-        }
-    }
-}
