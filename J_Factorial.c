@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int fun(int n)
+int fun(long long int n)
 {
     if (n == 0)
     {
@@ -17,7 +17,7 @@ int main()
     scanf("%lld", &n);
 
     long long int result = fun(n);
-    printf("%lld\n", result);
+    printf("%lld", result);
 
     return 0;
 }
