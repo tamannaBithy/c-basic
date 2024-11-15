@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int fun(long long int n)
+long long int fun(long long int n)
 {
     if (n == 0)
     {
